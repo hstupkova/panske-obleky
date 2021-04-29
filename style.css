@@ -58,3 +58,71 @@ h1.site-title span {
   stroke: #000;
   stroke-width: 2;
 }
+
+/* rozložení spodku stránky*/
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-wrapper {
+  display: flex;
+}
+
+.product__colors {
+  margin-left: 45px;
+}
+
+.choose-colors {
+  display: flex;
+}
+
+.color-option {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55px;
+}
+
+/* výběr barvy */
+
+.color-option__box {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 3px #FFFFFF;
+}
+
+.color-option__box--white {
+  background-color: white;
+}
+
+.color-option__box--black {
+  background-color: black;
+}
+
+.color-option__box--red {
+  background-color: #953232;
+}
+
+.color-option__box--blue {
+  background-color: skyblue;
+}
+
+.color-option__name {
+  text-align: center;
+}
+
+/* tlačítko pro objednání */
+
+.btn-order {
+  padding: 15px 50px;
+  color: white;
+  background-color: #141518;
+  border: 1px solid white;
+  border-radius: 23px;
+}
