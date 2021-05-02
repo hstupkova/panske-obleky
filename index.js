@@ -2,6 +2,7 @@
 
 console.log('funguju');
 
+/*
 const product = document.querySelector('#product-image');
 const whiteButton = document.querySelector('.color-option__box--white');
 const blackButton = document.querySelector('.color-option__box--black');
@@ -43,8 +44,25 @@ const changeColor = (event) => {
     redButton.classList.remove('color-option__chosen--product');
   }
 };
+*/
+
+const changeColor = (event) => {
+  for (let i = 0; i < colorButtons.length; i++) {
+    colorButtons[i].classList.remove('color-option__chosen--product');
+  };
+  event.target.classList.add('color-option__chosen--product');
+
+  const product = document.querySelector('#product-image');
+  const color = window.getComputedStyle(event.target, null).getPropertyValue('background-color');
+  product.style.fill = color;
+  if (color === 'rgb(0, 0, 0)') {
+    product.style.stroke = 'white';
+  } else {
+    product.style.stroke = 'black';
+  }
+};
 
 const colorButtons = document.querySelectorAll('.color-option__box');
 for (let i = 0; i < colorButtons.length; i++) {
   colorButtons[i].addEventListener('click', changeColor);
-}
+};
